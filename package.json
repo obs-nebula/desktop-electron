@@ -1,0 +1,13 @@
+{
+  "name": "desktop-electron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "ELECTRON_ENABLE_LOGGING=true electron ."
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^22.0.0"
+  }
+}
