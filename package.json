@@ -6,7 +6,7 @@
   "scripts": {
     "start": "ELECTRON_ENABLE_LOGGING=true electron ."
   },
-  "license": "ISC",
+  "license": "Apache-2.0",
   "devDependencies": {
     "electron": "^22.0.0"
   }
