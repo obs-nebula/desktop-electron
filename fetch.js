@@ -3,8 +3,8 @@ const result = document.getElementById('result');
 
 button.addEventListener('click', async () => {
   try {
-    const res = await fetch('http://localhost:5000/express_backend');
-    const json = await res.json();
+    const res = await fetch('http://localhost:8080');
+    const json = await res.text();
     result.innerText = JSON.stringify(json);
   } catch (e) {
     console.log(e);
