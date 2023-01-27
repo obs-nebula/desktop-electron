@@ -9,5 +9,11 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "electron": "^22.1.0"
+  },
+  "dependencies": {
+    "@opentelemetry/api": "^1.4.0",
+    "@opentelemetry/resources": "^1.9.0",
+    "@opentelemetry/sdk-trace-base": "^1.9.0",
+    "@opentelemetry/semantic-conventions": "^1.9.0"
   }
 }
