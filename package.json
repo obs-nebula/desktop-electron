@@ -4,7 +4,7 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "start": "ELECTRON_ENABLE_LOGGING=true electron ."
+    "start": "ELECTRON_DISABLE_SECURITY_WARNINGS=true ELECTRON_ENABLE_LOGGING=true electron . "
   },
   "license": "Apache-2.0",
   "devDependencies": {
@@ -12,8 +12,12 @@
   },
   "dependencies": {
     "@opentelemetry/api": "^1.4.0",
+    "@opentelemetry/context-zone": "^1.9.0",
+    "@opentelemetry/exporter-jaeger": "^1.9.0",
+    "@opentelemetry/instrumentation-fetch": "^0.35.0",
     "@opentelemetry/resources": "^1.9.0",
     "@opentelemetry/sdk-trace-base": "^1.9.0",
+    "@opentelemetry/sdk-trace-web": "^1.9.0",
     "@opentelemetry/semantic-conventions": "^1.9.0"
   }
 }
