@@ -1,11 +1,31 @@
-const button = document.getElementById('btn');
-const result = document.getElementById('result');
+const button1 = document.getElementById('btn');
+const result1 = document.getElementById('result');
 
-button.addEventListener('click', async () => {
+const button2 = document.getElementById('btn2');
+button2.style.display='none';
+const result2 = document.getElementById('result2');
+
+button1.addEventListener('click', async () => {
   try {
-    const res = await fetch('http://localhost:8080');
-    const text = await res.text();
-    result.innerText = text;
+    const res = await await fetch('http://localhost:8080', {
+      method: 'POST',
+      body: JSON.stringify({ value: 0 }),
+      headers: { 'Content-Type': 'application/json' }
+    });
+    const json = await res.json();
+    result.innerText = `Got ${JSON.stringify(json)} from Function One`;
+    button2.style.display = 'block';
+  } catch (e) {
+    console.log(e);
+  }
+});
+
+button2.addEventListener('click', async () => {
+  try {
+    const res = await await fetch('http://localhost:8084');
+    const json = await res.json();
+    result2.style.display = 'block';
+    result2.innerText = `Got ${json.value} from Function Five`;
   } catch (e) {
     console.log(e);
   }
