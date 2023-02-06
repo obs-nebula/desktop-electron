@@ -1,0 +1,13 @@
+body {
+    text-align: center; 
+    background-color: rgb(237, 234, 234);
+}
+.btn {
+    background-color:rgb(17, 104, 158); 
+    color:white; padding:0.5%;
+    margin:auto;
+    cursor: pointer;
+}
+.results {
+    margin:0.9%
+}
