@@ -13,7 +13,7 @@ button1.addEventListener('click', async () => {
       headers: { 'Content-Type': 'application/json' }
     });
     const json = await res.json();
-    result.innerText = `Got ${JSON.stringify(json)} from Function One`;
+    result1.innerText = `Got ${JSON.stringify(json)} from Function One`;
     button2.style.display = 'block';
   } catch (e) {
     console.log(e);

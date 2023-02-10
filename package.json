@@ -4,11 +4,14 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "start": "ELECTRON_DISABLE_SECURITY_WARNINGS=true ELECTRON_ENABLE_LOGGING=true electron . "
+    "start": "ELECTRON_DISABLE_SECURITY_WARNINGS=true ELECTRON_ENABLE_LOGGING=true electron . ",
+    "prestart": "eslint --fix --ignore-path .gitignore ."
   },
   "license": "Apache-2.0",
   "devDependencies": {
-    "electron": "^22.1.0"
+    "electron": "^22.1.0",
+    "eslint": "^8.33.0"
+
   },
   "dependencies": {
     "@opentelemetry/context-zone": "^1.9.1",
