@@ -1,5 +1,19 @@
 # desktop-electron
 
+A basic electron application created to call Knative functions.
+
+> OTEL-JS packages in use:
+
+| Package | Why |
+| ----------- | ----------- |
+| @opentelemetry/exporter-trace-otlp-http | To export to OTEL collector OTLP/HTTP |
+| @opentelemetry/resources | To be used with `semantic-conventions` to identify the application/service's name |
+| @opentelemetry/sdk-trace-web | For automatic instrumentation |
+| @opentelemetry/semantic-conventions | To be used with `resources` to identify the application/service's name |
+| @opentelemetry/instrumentation | To register the fetch auto-instrumentation plugin |
+| @opentelemetry/instrumentation-fetch | For fetch auto-instrumentation |
+
+
 ## How to run
 
 1. Open a terminal
