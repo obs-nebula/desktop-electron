@@ -2,22 +2,35 @@
   "name": "desktop-electron",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "dist/main.js",
   "scripts": {
-    "start": "ELECTRON_ENABLE_LOGGING=true electron . ",
-    "prestart": "eslint --fix --ignore-path .gitignore ."
+    "start": "ELECTRON_ENABLE_LOGGING=true electron dist/main.js",
+    "lint": "eslint . --ext .ts",
+    "build": "tsc --build tsconfig.json && npm run copy-files",
+    "clean": "rm -Rf dist",
+    "copy-files": "copyfiles -u 1 src/index.html src/index.css dist/"
   },
   "license": "Apache-2.0",
   "devDependencies": {
+    "@types/node": "^18.15.11",
+    "@typescript-eslint/eslint-plugin": "^5.57.0",
+    "@typescript-eslint/parser": "^5.57.0",
+    "copyfiles": "^2.4.1",
     "electron": "^23.0.0",
-    "eslint": "^8.37.0"
+    "eslint": "^8.37.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.7",
+    "rimraf": "^5.0.0",
+    "typescript": "^5.0.3"
   },
   "dependencies": {
-    "@opentelemetry/exporter-trace-otlp-http": "^0.38.0",
-    "@opentelemetry/instrumentation": "^0.38.0",
+    "@opentelemetry/exporter-trace-otlp-http": "^0.37.0",
+    "@opentelemetry/instrumentation": "^0.37.0",
     "@opentelemetry/instrumentation-fetch": "^0.37.0",
-    "@opentelemetry/resources": "^1.12.0",
-    "@opentelemetry/sdk-trace-web": "^1.12.0",
-    "@opentelemetry/semantic-conventions": "^1.12.0"
+    "@opentelemetry/resources": "^1.11.0",
+    "@opentelemetry/sdk-trace-web": "^1.11.0",
+    "@opentelemetry/semantic-conventions": "^1.11.0"
   }
 }

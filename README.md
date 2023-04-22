@@ -4,7 +4,7 @@ A basic electron application created to call Knative functions.
 
 > OTEL-JS packages in use:
 
-| Package | Why |
+| Package | |
 | ----------- | ----------- |
 | @opentelemetry/exporter-trace-otlp-http | To export to OTEL collector OTLP/HTTP |
 | @opentelemetry/resources | To be used with `semantic-conventions` to identify the application/service's name |
@@ -13,14 +13,13 @@ A basic electron application created to call Knative functions.
 | @opentelemetry/instrumentation | To register the fetch auto-instrumentation plugin |
 | @opentelemetry/instrumentation-fetch | For fetch auto-instrumentation |
 
-
 ## How to run
 
 1. Open a terminal
 
 2. Clone the Function-Five repository:
 
-```console
+```shell
 git clone https://github.com/obs-nebula/function-five.git
 ```
 
@@ -30,10 +29,11 @@ git clone https://github.com/obs-nebula/function-five.git
 
 5. Open other terminal and run this example
 
-```console
+```shell
 git clone https://github.com/obs-nebula/desktop-electron.git
 cd desktop-electron
 npm install
+npm run build
 npm start
 ```
 
